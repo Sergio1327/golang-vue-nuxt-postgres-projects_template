@@ -1,0 +1,47 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:15.3
+    environment:
+      POSTGRES_USER: test_db
+      POSTGRES_PASSWORD: test_db
+      POSTGRES_DB: test_db
+      PGDATA: /data
+      TZ: 'GMT+5'
+    volumes:
+       - ./volumes/pg/data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U test_db"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+    ports:
+      - "5432:5432"
+  migrate:
+    depends_on:
+      db:
+        condition: service_healthy
+    image: migrate/migrate
+    volumes:
+        - ./volumes/migrate:/migrations
+    command: ["-path", "/migrations", "-database",  "postgres://test_db:test_db@db:5432/test_db?sslmode=disable", "up"]
+  cron:
+    image: ${NAME}:${VERSION}
+    build: 
+      context: ..
+      dockerfile: ./docker/Dockerfile
+      args:
+        VERSION: ${VERSION}
+        NAME: ${NAME}
+    command: /app/project_template
+    environment:
+      TZ: 'Asia/Tashkent'
+      DEBUG: 'true'
+      VERSION: ${VERSION}
+      PG_URL: postgresql://test_db:test_db@db:5432/test_db?sslmode=disable
+    volumes: 
+      - ./volumes/log:/app/log
+      - ../src/config/conf.yaml:/app/conf.yaml
+      - ../src/config/oracle_connect:/app/oracle_connect
+    stop_grace_period: 2s
