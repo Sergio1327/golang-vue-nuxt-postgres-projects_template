@@ -43,7 +43,9 @@ func main() {
 	bi := bimport.NewEmptyBridge()
 
 	ui := uimport.NewUsecaseImports(log, dblog, ri, bi, sm)
-	bi.InitBridge()
+	bi.InitBridge(
+		ui.Usecase.Template,
+	)
 
 	cron := external.NewCron(log, dblog, ui)
 	cron.Run()

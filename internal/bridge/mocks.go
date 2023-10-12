@@ -5,59 +5,47 @@
 package bridge
 
 import (
+	template "projects_template/internal/entity/template"
+	transaction "projects_template/internal/transaction"
 	reflect "reflect"
-	time "time"
 
 	gomock "github.com/golang/mock/gomock"
 )
 
-// MockDate is a mock of Date interface.
-type MockDate struct {
+// MockTemplate is a mock of Template interface.
+type MockTemplate struct {
 	ctrl     *gomock.Controller
-	recorder *MockDateMockRecorder
+	recorder *MockTemplateMockRecorder
 }
 
-// MockDateMockRecorder is the mock recorder for MockDate.
-type MockDateMockRecorder struct {
-	mock *MockDate
+// MockTemplateMockRecorder is the mock recorder for MockTemplate.
+type MockTemplateMockRecorder struct {
+	mock *MockTemplate
 }
 
-// NewMockDate creates a new mock instance.
-func NewMockDate(ctrl *gomock.Controller) *MockDate {
-	mock := &MockDate{ctrl: ctrl}
-	mock.recorder = &MockDateMockRecorder{mock}
+// NewMockTemplate creates a new mock instance.
+func NewMockTemplate(ctrl *gomock.Controller) *MockTemplate {
+	mock := &MockTemplate{ctrl: ctrl}
+	mock.recorder = &MockTemplateMockRecorder{mock}
 	return mock
 }
 
 // EXPECT returns an object that allows the caller to indicate expected use.
-func (m *MockDate) EXPECT() *MockDateMockRecorder {
+func (m *MockTemplate) EXPECT() *MockTemplateMockRecorder {
 	return m.recorder
 }
 
-// Now mocks base method.
-func (m *MockDate) Now() time.Time {
+// AwesomePublicMethod mocks base method.
+func (m *MockTemplate) AwesomePublicMethod(ts transaction.Session) (template.TemplateObject, error) {
 	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "Now")
-	ret0, _ := ret[0].(time.Time)
-	return ret0
+	ret := m.ctrl.Call(m, "AwesomePublicMethod", ts)
+	ret0, _ := ret[0].(template.TemplateObject)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
 }
 
-// Now indicates an expected call of Now.
-func (mr *MockDateMockRecorder) Now() *gomock.Call {
+// AwesomePublicMethod indicates an expected call of AwesomePublicMethod.
+func (mr *MockTemplateMockRecorder) AwesomePublicMethod(ts interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Now", reflect.TypeOf((*MockDate)(nil).Now))
-}
-
-// Today mocks base method.
-func (m *MockDate) Today() time.Time {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "Today")
-	ret0, _ := ret[0].(time.Time)
-	return ret0
-}
-
-// Today indicates an expected call of Today.
-func (mr *MockDateMockRecorder) Today() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Today", reflect.TypeOf((*MockDate)(nil).Today))
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AwesomePublicMethod", reflect.TypeOf((*MockTemplate)(nil).AwesomePublicMethod), ts)
 }

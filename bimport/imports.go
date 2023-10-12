@@ -1,14 +1,16 @@
 package bimport
 
-import "projects_template/tools/datefunctions"
+import (
+	"projects_template/internal/bridge"
+)
 
 type BridgeImports struct {
 	Bridge Bridge
 }
 
-func (b *BridgeImports) InitBridge() {
+func (b *BridgeImports) InitBridge(template bridge.Template) {
 	b.Bridge = Bridge{
-		Date: datefunctions.NewDateTool(),
+		Template: template,
 	}
 }
 

@@ -17,7 +17,7 @@ func NewTestBridgeImports(
 	return &TestBridgeImports{
 		ctrl: ctrl,
 		TestBridge: TestBridge{
-			Date: bridge.NewMockDate(ctrl),
+			Template: bridge.NewMockTemplate(ctrl),
 		},
 	}
 }
@@ -25,7 +25,7 @@ func NewTestBridgeImports(
 func (t *TestBridgeImports) BridgeImports() *BridgeImports {
 	return &BridgeImports{
 		Bridge: Bridge{
-			Date: t.TestBridge.Date,
+			Template: t.TestBridge.Template,
 		},
 	}
 }

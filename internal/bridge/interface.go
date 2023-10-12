@@ -1,8 +1,12 @@
 package bridge
 
-import "time"
+import (
+	"projects_template/internal/entity/template"
+	"projects_template/internal/transaction"
+)
 
-type Date interface {
-	Today() time.Time
-	Now() time.Time
+
+
+type Template interface{
+	AwesomePublicMethod(ts transaction.Session) (data template.TemplateObject, err error)
 }
