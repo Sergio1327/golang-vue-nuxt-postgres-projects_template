@@ -2,3 +2,27 @@
 [project_template] [36mINFO[0m[12.10.2023 11:53:54] version 1.0.0                                 [36mfile[0m=cmd/main.go [36mline[0m=25
 [project_template] [36mINFO[0m[12.10.2023 11:56:42] version 1.0.0                                 [36mfile[0m=cmd/main.go [36mline[0m=25
 [project_template] [36mINFO[0m[12.10.2023 12:01:12] version 1.0.0                                 [36mfile[0m=cmd/main.go [36mline[0m=25
+[project_template] [36mINFO[0m[13.10.2023 17:03:14] version 1.0.0                                 [36mfile[0m=cmd/main.go [36mline[0m=25
+[project_template] [36mINFO[0m[13.10.2023 17:05:46] version 1.0.0                                 [36mfile[0m=cmd/main.go [36mline[0m=25
+[project_template] [36mINFO[0m[13.10.2023 17:07:48] version 1.0.0                                 [36mfile[0m=cmd/main.go [36mline[0m=25
+[project_template] [33mWARN[0m[13.10.2023 17:07:48] 123                                           [33mfile[0m=cmd/main.go [33mline[0m=31
+[project_template] [36mINFO[0m[13.10.2023 17:11:04] version 1.0.0                                 [36mfile[0m=cmd/main.go [36mline[0m=25
+[project_template] [33mWARN[0m[13.10.2023 17:11:04] 123                                           [33mfile[0m=cmd/main.go [33mline[0m=31
+[project_template] [36mINFO[0m[13.10.2023 17:11:23] version 1.0.0                                 [36mfile[0m=cmd/main.go [36mline[0m=25
+[project_template] [33mWARN[0m[13.10.2023 17:11:23] 123                                           [33mfile[0m=cmd/main.go [33mline[0m=31
+[project_template] [36mINFO[0m[13.10.2023 17:13:06] version 1.0.0                                 [36mfile[0m=cmd/main.go [36mline[0m=25
+[project_template] [33mWARN[0m[13.10.2023 17:13:06] 123                                           [33mfile[0m=cmd/main.go [33mline[0m=31
+[project_template] [33mWARN[0m[13.10.2023 17:13:07] 123                                           [33mfile[0m=cmd/main.go [33mline[0m=33
+[project_template] [36mINFO[0m[13.10.2023 17:13:57] version 1.0.0                                 [36mfile[0m=cmd/main.go [36mline[0m=25
+[project_template] [33mWARN[0m[13.10.2023 17:13:57] 123                                           [33mfile[0m=cmd/main.go [33mline[0m=31
+[project_template] [36mINFO[0m[13.10.2023 17:14:13] version 1.0.0                                 [36mfile[0m=cmd/main.go [36mline[0m=25
+[project_template] [33mWARN[0m[13.10.2023 17:14:13] 123                                           [33mfile[0m=cmd/main.go [33mline[0m=31
+[project_template] [36mINFO[0m[13.10.2023 17:15:06] version 1.0.0                                 [36mfile[0m=cmd/main.go [36mline[0m=25
+[project_template] [33mWARN[0m[13.10.2023 17:15:06] 123                                           [33mfile[0m=cmd/main.go [33mline[0m=31
+[project_template] [36mINFO[0m[13.10.2023 17:19:43] version 1.0.0                                 [36mfile[0m=cmd/main.go [36mline[0m=25
+[project_template] [36mINFO[0m[13.10.2023 17:21:15] version 1.0.0                                 [36mfile[0m=cmd/main.go [36mline[0m=25
+[project_template] [36mINFO[0m[13.10.2023 17:23:00] version 1.0.0                                 [36mfile[0m=cmd/main.go [36mline[0m=25
+[project_template] [36mINFO[0m[13.10.2023 17:23:15] version 1.0.0                                 [36mfile[0m=cmd/main.go [36mline[0m=25
+[project_template] [36mINFO[0m[13.10.2023 17:23:23] version 1.0.0                                 [36mfile[0m=cmd/main.go [36mline[0m=25
+[project_template] [36mINFO[0m[13.10.2023 17:32:00] version 1.0.0                                 [36mfile[0m=cmd/main.go [36mline[0m=25
+[project_template] [36mINFO[0m[13.10.2023 17:33:15] version 1.0.0                                 [36mfile[0m=cmd/main.go [36mline[0m=25

@@ -30,7 +30,7 @@ func (c *Config) PostgresURL() string {
 		log.Fatalln("отсутствует PG_URL")
 	}
 
-	return fmt.Sprintf("postgres://%s?sslmode=disable", pgURL)
+	return pgURL
 }
 
 // OracleConnectString connect to oracle server

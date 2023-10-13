@@ -21,7 +21,7 @@ var (
 )
 
 func main() {
-	log := logger.NewFileLogger(module)
+	log := logger.NewNoFileLogger(module)
 	log.Infoln("version", version)
 
 	config, err := config.NewConfig(os.Getenv("CONF_PATH"))
@@ -31,6 +31,7 @@ func main() {
 
 	db := pgdb.SqlxDB(config.PostgresURL())
 	defer db.Close()
+
 	if err := db.Ping(); err != nil {
 		log.Fatal(err)
 	}
