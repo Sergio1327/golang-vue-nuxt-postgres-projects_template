@@ -58,7 +58,7 @@ func TestMeasureLogger(t *testing.T) {
 	config, err := config.NewConfig(os.Getenv("CONF_PATH"))
 	require.NoError(t, err)
 
-	db := pgdb.SqlxDB(config.PostgresURL())
+	db := pgdb.NewPostgresDB(config.PostgresURL())
 	defer db.Close()
 
 	sm := transaction.NewSQLSessionManager(db)

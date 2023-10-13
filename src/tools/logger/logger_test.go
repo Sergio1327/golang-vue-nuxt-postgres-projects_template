@@ -18,7 +18,7 @@ func TestLogger(t *testing.T) {
 	config, err := config.NewConfig(os.Getenv("CONF_PATH"))
 	r.NoError(err)
 
-	db := pgdb.SqlxDB(config.PostgresURL())
+	db := pgdb.NewPostgresDB(config.PostgresURL())
 	if err := db.Ping(); err != nil {
 		r.NoError(err)
 	}
@@ -51,7 +51,7 @@ func TestUsecaseLogger(t *testing.T) {
 	config, err := config.NewConfig(os.Getenv("CONF_PATH"))
 	r.NoError(err)
 
-	db := pgdb.SqlxDB(config.PostgresURL())
+	db := pgdb.NewPostgresDB(config.PostgresURL())
 	if err := db.Ping(); err != nil {
 		r.NoError(err)
 	}

@@ -29,7 +29,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	db := pgdb.SqlxDB(config.PostgresURL())
+	db := pgdb.NewPostgresDB(config.PostgresURL())
 	defer db.Close()
 
 	if err := db.Ping(); err != nil {

@@ -8,7 +8,7 @@ import (
 )
 
 // SqlxDB get db link
-func SqlxDB(URL string) *sqlx.DB {
+func NewPostgresDB(URL string) *sqlx.DB {
 	db, err := sqlx.Connect("postgres", URL)
 	if err != nil {
 		log.Fatalln(err)
