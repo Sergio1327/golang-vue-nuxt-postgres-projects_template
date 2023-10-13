@@ -1,9 +1,8 @@
 module projects_template
 
-go 1.20
+go 1.21
 
 require (
-	github.com/bxcodec/faker v2.0.1+incompatible
 	github.com/davecgh/go-spew v1.1.1
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/fatih/color v1.14.1
@@ -14,7 +13,6 @@ require (
 	github.com/jinzhu/now v1.1.5
 	github.com/jmoiron/sqlx v1.3.5
 	github.com/lib/pq v1.10.7
-	github.com/mattn/go-oci8 v0.1.1
 	github.com/satori/go.uuid v1.2.0
 	github.com/sirupsen/logrus v1.9.3
 	github.com/stretchr/testify v1.8.1
@@ -39,7 +37,6 @@ require (
 	github.com/pelletier/go-toml/v2 v2.0.6 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/ugorji/go/codec v1.2.7 // indirect
-	golang.org/x/exp v0.0.0-20230905200255-921286631fa9
 	golang.org/x/net v0.8.0 // indirect
 	golang.org/x/sys v0.12.0 // indirect
 	golang.org/x/text v0.8.0 // indirect

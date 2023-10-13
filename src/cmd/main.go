@@ -28,7 +28,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-
+	log.Infoln(config.Template.TmplString)
 	db := pgdb.NewPostgresDB(config.PostgresURL())
 	defer db.Close()
 

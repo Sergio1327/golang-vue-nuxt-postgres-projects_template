@@ -4,16 +4,15 @@ import (
 	"fmt"
 	"log"
 	"os"
-	"time"
 
 	"github.com/jinzhu/configor"
 )
 
 // Config конфиг
 type Config struct {
-	Redis struct {
-		CacheTime time.Duration `yaml:"cacheTime"`
-	} `yaml:"redis"`
+	Template struct {
+		TmplString string `yaml:"template_string"`
+	}
 }
 
 // NewConfig init and return project config
@@ -55,11 +54,6 @@ func (c *Config) RedisConnect() string {
 	}
 
 	return fmt.Sprintf("redis://%s/", redisURL)
-}
-
-// RedisCacheLifetime cache life time
-func (c *Config) RedisCacheLifetime() time.Duration {
-	return c.Redis.CacheTime * time.Hour
 }
 
 // RabbitMQConnectURL подключение к rabbitmq
