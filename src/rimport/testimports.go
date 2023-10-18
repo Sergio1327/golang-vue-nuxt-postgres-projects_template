@@ -7,7 +7,7 @@ import (
 	"projects_template/internal/repository"
 	"projects_template/internal/transaction"
 
-	"github.com/golang/mock/gomock"
+	"go.uber.org/mock/gomock"
 )
 
 type TestRepositoryImports struct {

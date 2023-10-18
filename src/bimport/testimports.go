@@ -3,7 +3,7 @@ package bimport
 import (
 	"projects_template/internal/bridge"
 
-	"github.com/golang/mock/gomock"
+	"go.uber.org/mock/gomock"
 )
 
 type TestBridgeImports struct {

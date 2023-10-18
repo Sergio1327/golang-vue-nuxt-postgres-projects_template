@@ -16,6 +16,7 @@ require (
 	github.com/satori/go.uuid v1.2.0
 	github.com/sirupsen/logrus v1.9.3
 	github.com/stretchr/testify v1.8.1
+	go.uber.org/mock v0.3.0
 	golang.org/x/crypto v0.5.0
 	google.golang.org/grpc v1.54.0
 )

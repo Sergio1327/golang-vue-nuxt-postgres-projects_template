@@ -1,7 +1,7 @@
 #!/bin/bash
 export DEBUG=true
 export CONF_PATH=../../../../../config/conf.yaml
-export PG_URL=project_template:project_template@127.0.0.1:5432/project_template
+export PG_URL=postgresql://test_db:test_db@db:5432/test_db?sslmode=disable
 
 
 if [ -z "$1" ]
