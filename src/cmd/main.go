@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"os"
 	"projects_template/bimport"
 	"projects_template/config"
@@ -35,8 +34,6 @@ func main() {
 	if err := db.Ping(); err != nil {
 		log.Fatal(err)
 	}
-
-	fmt.Println(db)
 
 	sm := transaction.NewSQLSessionManager(db)
 	ri := rimport.NewRepositoryImports(sm)
